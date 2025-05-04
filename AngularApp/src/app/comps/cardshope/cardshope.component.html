@@ -1,0 +1,49 @@
+
+
+
+
+  <figure class="snip1583">
+    
+    <a [ngClass]="(p.amount &&p.amount>0)?'sold':'sold_out'">Sold out</a>
+    <img [src]="urlpic" alt="sample68" />
+    <div class="icons"  >
+      <a><i class="ion-android-cart" (click)="addtocart()"
+      [ngClass]="(p.amount &&p.amount>0)?'g':'r'"
+      [appRedBorder]="num">
+      
+    </i></a>
+    <a>
+      <i class="ion-plus-round" (click)="move(p.id?p.id:100)"></i></a></div>
+    <figcaption>
+      <h3>{{p.nameP}}</h3>
+      <div class="price"> {{p.price  | currency:'ILS'}}</div>
+     
+    </figcaption>
+  </figure>
+ 
+
+
+
+  <!-- <section id="product1" class="section-p1">
+    <div class="pro-container">
+      <div class="pro" >
+        <a [ngClass]="(p.amount &&p.amount>0)?'sold':'sold_out'">Sold out</a>
+        <img [src]="urlpic" alt="">
+        <div class="des"  (click)="move(p.id?p.id:100)">
+          <span>{{p?.nameP}}</span>
+          <h5>{{p?.descrip}}</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>{{p?.price | currency: 'ILS'}}</h4>
+        </div>
+       <a class="mycart" > 
+          <i class="fa-solid fa-shopping-cart mycart" (click)="addtocart()"></i>
+       </a>
+      </div>
+    </div>
+  </section> -->

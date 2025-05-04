@@ -1,0 +1,42 @@
+.login-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: rgba(255, 255, 255, 0.9); /* צבע לבן עם שקיפות */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1050; /* מעל הרקע החוסם */
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  background-image: url('/a9.jpg'); /* אם התמונה בתיקיית assets */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.20; /* שקיפות לתמונה */
+  z-index: -1; /* מאחורי הטקסט */
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}

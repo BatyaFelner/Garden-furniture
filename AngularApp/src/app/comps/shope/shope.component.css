@@ -1,0 +1,21 @@
+body{
+    direction: rtl;
+ 
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+  
+    justify-content: space-around;
+    flex: 1 1 20%; /* פריסת כרטיסים עם רווחים */
+ 
+    
+}
+
+.v{
+
+    width: 30%;
+    margin: 50px;
+    height: 37%;
+
+}

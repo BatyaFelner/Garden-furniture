@@ -1,0 +1,90 @@
+<div class="page-container">
+
+  <div class="filter-section">
+    <h2>סינון מוצרים</h2>
+   @if(categoryId==undefined){
+    <div>
+      <label for="categorySelect">בחר קטגוריה</label>
+      <select
+        class="form-select"
+        id="categorySelect"
+        name="categorySelect"
+        [(ngModel)]="selectall[0]"
+      >
+        <option [value]="0">בחר קטגוריה</option>
+        @for (c of allC; track $index) {
+        <option [value]="c.id">{{ c.categoryName }}</option>
+        }
+      </select>
+    </div>
+  }
+    <div>
+      <label for="companySelect">בחר חברה</label>
+      <select
+        class="form-select"
+        id="companySelect"
+        name="companySelect"
+        [(ngModel)]="selectall[3]"
+      >
+        <option [value]="0">בחר חברה</option>
+        @for (c of allCm; track c) {
+        <option [value]="c.id">{{ c.companyName }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <p>בחר סכום מינימום</p>
+      <input
+        type="number"
+        id="minInput"
+        class="custom-input"
+        placeholder="מינימום"
+        [(ngModel)]="selectall[1]"
+      />
+    </div>
+    <!-- סכום מקסימום -->
+    <div>
+      <p>בחר סכום מקסימום</p>
+      <input
+        type="number"
+        id="maxInput"
+        class="custom-input"
+        placeholder="מקסימום"
+        [(ngModel)]="selectall[2]"
+      />
+    </div>
+ 
+    <div>
+      <!-- <button (click)="filter()">לסינון</button> -->
+       
+      <app-button class=".filter-section app-button:hover
+        " iconName="fa-solid fa-filter" text="לסינון" (myEvent)="filter()"></app-button>
+      
+ 
+    </div>
+    <h2>מיון מוצרים</h2>
+  <div class="mi">
+    <div>
+      <app-button iconName="fa-solid fa-sort-amount-down-alt" text="מינימום" (myEvent)="sort1(min)"></app-button>
+    </div>
+    
+    <div>
+      <app-button iconName="fa-solid fa-sort-amount-up" text="מקסימום" (myEvent)="sort1(max)"></app-button>    </div>
+  </div>
+   
+  
+  </div>
+
+
+  <div class="cards-section">
+    <h4>{{ allP[0] && categoryId ? allP[0].codeCategoryName : 'כל המוצרים' }}</h4>
+    <div class="p">
+      @for (p of allP; track p) {
+      <div class="v">
+        <app-cardshope [p]="p"></app-cardshope>
+      </div>
+      }
+    </div>
+  </div>
+</div>

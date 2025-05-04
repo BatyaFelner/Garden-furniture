@@ -1,0 +1,151 @@
+<!-- <nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="./shop">כל הקטגוריות</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="./products">כל המוצרים</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="./login">הרשמה</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="./basket">🛒</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<main>
+
+  <div class="container">
+    <header>
+
+      <div class="header-main">
+        <div></div>
+        <!-- <div class="language">
+          <label>
+            <svg class="icon icon-language">
+              <use xlink:href="#icon-language"></use>
+            </svg>
+            <select class="js_language_selector">
+              <option value="">Eng</option>
+              <option value="">Tr</option>
+              <option value="">Fr</option>
+              <option value="">Nl</option>
+            </select>
+          </label>
+        </div> -->
+
+        <div class="logo">
+          LaPlay
+        </div>
+        <div  (click)="toggleLogin()">
+      
+          
+           
+              <!-- סמליל המשתמש -->
+          
+            <i class="fa-solid fa-user-circle"></i>       
+          
+      </div>
+ 
+        
+        <!-- הצגת קומפוננטת ה-Login -->
+         @if(showLogin){
+          <app-login (close)="showLogin = false"></app-login>
+         }
+
+      
+      </div>
+
+      <div class="navigation">
+        <span class="nav-logo"><a routerLink="./basket">
+            <div class="header-cart">
+              <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+              <span>{{b.basket.sumCount}}</span>
+            </div>
+          </a>
+        </span>
+
+        <nav >
+          <a routerLink="./home page">דף הבית</a>
+          <a routerLink="./כל המוצרים"> כל הקטגוריות </a>
+          <a routerLink="./products"> כל המוצרים</a>
+          <!-- <a  routerLink="./login">הרשמה</a> -->
+          <!-- <a routerLink="./basket">🛒</a> -->
+        </nav>
+
+        <!-- <div class="navton"> -->
+        <!-- <a href="#">
+            <svg class="icon icon-bag">
+              <use xlink:href="#icon-bag"></use>
+            </svg>
+          </a> -->
+        <!-- <div></div> -->
+
+        <!-- <a href="#">
+            <svg class="icon icon-search">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </a> -->
+        <!-- </div> -->
+      </div>
+
+    </header>
+  </div>
+</main>
+<router-outlet></router-outlet>
+<footer>
+  <div class="footer">
+    <img src="https://i.ibb.co/2yV3VsL/logo.png" alt="Logo" />
+    <div class="column">
+      <ul>
+        <li class="">COMPANY</li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">For the record</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <ul>
+        <li class="">COMMUNITIES</li>
+        <li><a href="#">For Artists</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">Investors</a></li>
+        <li><a href="#">Vendors</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <ul>
+        <li class="">USEFUL LINKS</li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Web Player</a></li>
+        <li><a href="#">Free Mobile App</a></li>
+      </ul>
+    </div>
+    <div class="socials">
+      <a class="social-icon" href="#"><span><i class="fab fa-instagram"></i></span></a>
+      <a class="social-icon" href="#"><span><i class="fab fa-twitter"></i></span></a>
+      <a class="social-icon" href="#"><span><i class="fab fa-facebook-f"></i></span></a>
+    </div>
+  </div>
+  <div class="country">
+    Romania<img src="https://i.ibb.co/x7R9qfT/flag.png" alt="country-flag" />
+  </div>
+  <div class="info">
+    <div>
+      <a href="#">Legal</a>
+      <a href="#">Privacy Center</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookies</a>
+      <a href="#">About Ads</a>
+    </div>
+    <div class="copyright">
+      © 2020 Spotify AB
+    </div>
+  </div>
+</footer>

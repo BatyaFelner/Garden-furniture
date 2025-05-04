@@ -1,0 +1,140 @@
+<div class="backdrop">
+</div>
+<div class="login-modal">
+  <div class="modal-backdrop"></div>
+
+  <button class="close-btn" (click)="closeLogin()">×</button>
+
+  <form>
+  <h3>{{l}} 
+    @if(l=="register"){<i class="fa-solid fa-user-plus"></i>}
+  @else {<i class="fa-solid fa-user"></i>}</h3>
+  <!-- <form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="text" id="id" class="form-control" [(ngModel)]="id" name="id" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="form-control" [(ngModel)]="email" name="email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+       @if(errorMessage){
+    <div class="text-danger mt-2">
+      {{ errorMessage }}
+    
+    </div> -->
+
+
+<div class="container mt-3">
+
+  <form class="was-validated" (ngSubmit)="l1()" #myForm="ngForm">
+  
+    <div class="mb-3 mt-3">
+      <label for="id" class="form-label">ID:</label>
+      <input type="text" class="form-control" id="id" placeholder="Enter ID" name="id"  [(ngModel)]="c.id" minlength="9" maxlength="9"
+      required #cID="ngModel" min="1">
+      @if(cID.invalid && (cID.dirty || cID.touched))
+      {
+    <div class="invalid-feedback">
+      <p [hidden]="!cID.errors?.['required']">שדה חובה</p>
+
+      <p [hidden]="!cID.errors?.['minlength']">ת.ז. קצרה מידי</p>
+
+    </div>
+      }
+
+    </div>
+   
+    <div class="mb-3 mt-3">
+      <label for="uname" class="form-label">mail:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter email" name="uname"  [(ngModel)]= "c.email"
+      required #ce = "ngModel"   pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+      >
+      @if(ce.invalid && (ce.dirty || ce.touched))
+      {
+    <div class="invalid-feedback">
+      <p [hidden]="!ce.errors?.['required']">שדה חובה</p>
+      <p [hidden]="!ce.errors?.['pattern']">נא לכתוב מייל תקין</p>
+     
+
+      
+
+    </div>
+      }
+      
+    </div>
+    @if(l=='register'){
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter adress" name="name"  [(ngModel)]= "c.clientName"
+      required #cname = "ngModel" pattern="[א-ת]*">
+      @if(cname.invalid && (cname.dirty || cname.touched))
+      {
+    <div class="invalid-feedback">
+      <p [hidden]="!cname.errors?.['required']">שדה חובה</p>
+      <p [hidden]="!cname.errors?.['pattern']">יש לכתוב באותיותבעיברית בלבד</p>
+
+      
+
+    </div>
+      }
+   </div>
+
+
+
+    <div class="mb-3 mt-3">
+      <label for="ame" class="form-label">phone:</label>
+      <input type="text" class="form-control" id="ame" placeholder="Enter phone" name="ame"  [(ngModel)]= "c.phone"
+      required #cp = "ngModel"    pattern="[0-9]*" minlength="7" maxlength="10">
+      @if(cp.invalid && (cp.dirty || cp.touched))
+      {
+    <div class="invalid-feedback">
+      <p [hidden]="!cp.errors?.['required']">שדה חובה</p>
+      <p [hidden]="!cp.errors?.['pattern']">יש למלא מספרים בלבד!</p>
+      <p [hidden]="!cp.errors!['minlength']">מספר קצר די</p>
+
+      
+
+    </div>
+      }
+      
+  
+    </div>
+
+
+
+    <div class="mb-3 mt-3">
+      <label for="me" class="form-label">Date:</label>
+      <input type="date" class="form-control" id="me" placeholder="Enter email" name="me"  [(ngModel)]= "c.bearthDate"
+      required #cd = "ngModel">
+      @if(cd.invalid && (cd.dirty || cd.touched))
+      {
+    <div class="invalid-feedback">
+      <p [hidden]="!cd.errors?.['required']">שדה חובה</p>
+
+     
+
+      
+
+    </div>
+      }
+      
+  
+    </div>
+    <div class="toggle-link" (click)="toggleForm()">
+      {{ l == 'register' ? 'כבר יש לך חשבון? התחבר' : 'עדיין אין לך חשבון? הרשמה' }}
+    </div>
+  }
+
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+

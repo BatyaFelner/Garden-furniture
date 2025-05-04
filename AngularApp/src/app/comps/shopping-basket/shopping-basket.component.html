@@ -1,0 +1,69 @@
+<div class="pt-4 pb-4">
+    <h2 class="text-center">Shopping Cart</h2>
+    <div class="row mt-5 gap-3 gap-md-0 gap-lg-0">
+      <div class="col-lg-8 col-md-7">
+        <div class="card">
+          <h4>Cart ({{ pd.basket.sumCount}} items)</h4>
+
+          <div >
+            @for(item of stores;track item.descrip;let i = $index){
+              <app-cartitem
+                [item]="item"
+                [line]="i + 1 < stores.length"
+                (add)="addToCart(item)"
+              (remove1)="remove1(item)"
+                (remove)="removeFromCart(item)"
+              >
+            </app-cartitem>
+            }
+            
+          </div>
+        </div>
+      </div>
+      @if(pd.basket.sumCount>0){
+      <div class="col-lg-4 col-md-5" >
+        <div class="row gap-3">
+          <div class="col">
+            <div class="card">
+            
+              <h4>The total amount of</h4>
+              <div class="store-item mt-2">
+                <div class="row">
+                  <div class="col">
+                    <div class="list-store d-flex align-items-center justify-content-between">
+                      <p>Temporary amount</p>
+                      <p>{{ pd.basket.sumPrice }}</p>
+                    </div>
+                    <div class="list-store d-flex align-items-center justify-content-between">
+                      <p>Shipping</p>
+                      <p>Gratis</p>
+                    </div>
+                    <div class="bottom-line"></div>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-6">
+                    <p class="p-total-label">The total amount of (Including VAT)</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="p-total">{{pd.basket.sumPrice }}</p>
+                  </div>
+                </div>
+                <div class="row mt-1">
+                  <div class="col">
+                    <button class="btn btn-primary w-100" (click)="topay()">לקופה</button>
+                  </div>
+                </div>
+              </div>
+           
+              <!-- <app-amount-store [totalAmount]="totalAmount"></app-amount-store> -->
+            </div>
+          </div>
+       
+          
+        </div>
+      </div>
+    }
+    </div>
+    
+  </div> 
