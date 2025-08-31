@@ -23,7 +23,7 @@ A comprehensive e-commerce website for selling patio furniture and accessories. 
 ### Frontend (Angular)
 To install and run the application locally, follow these steps:  
 Clone the repository:  
-git clone [https://github.com/DassiErenshtein/patio_furniture.git](https://github.com/DassiErenshtein/patio_furniture.git)  
+git clone [https://github.com/BatyaFelner/Garden-furniture?tab=readme-ov-file](https://github.com/DassiErenshtein/patio_furniture.git)  
 • Navigate to the frontend folder:  
 cd Angular  
 • Install dependencies: 
