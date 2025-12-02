@@ -1,5 +1,5 @@
 # patio_furniture
-A comprehensive e-commerce website for selling patio furniture and accessories. The platform includes product display with advanced filtering options, a persistent shopping cart that remains active between sessions, purchase saving integrated with a database, handling of exceptional cases such as out-of-stock items, and various other exciting features.
+A comprehensive e-commerce website for selling patio furniture and accessories. The platform includes product display with advanced filtering options, a persistent shopping cart that remains active between sessions, purchase saving integrated with a database, handling of exceptional cases such as out-of-stock items, and various other exciting features. Link to this internet website -https://patio_furniture.com
 ## Features
 • Browse available products.  
 • Filter by categories, price or tags.  
@@ -23,7 +23,7 @@ A comprehensive e-commerce website for selling patio furniture and accessories. 
 ### Frontend (Angular)
 To install and run the application locally, follow these steps:  
 Clone the repository:  
-git clone [https://github.com/BatyaFelner/Garden-furniture?tab=readme-ov-file](https://github.com/DassiErenshtein/patio_furniture.git)  
+git clone https://github.com/BatyaFelner/Garden-furniture.git 
 • Navigate to the frontend folder:  
 cd Angular  
 • Install dependencies: 
