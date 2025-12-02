@@ -1,5 +1,6 @@
 # patio_furniture
-A comprehensive e-commerce website for selling patio furniture and accessories. The platform includes product display with advanced filtering options, a persistent shopping cart that remains active between sessions, purchase saving integrated with a database, handling of exceptional cases such as out-of-stock items, and various other exciting features. Link to this internet website  [https://patio_furniture.com
+A comprehensive e-commerce website for selling patio furniture and accessories. The platform includes product display with advanced filtering options, a persistent shopping cart that remains active between sessions, purchase saving integrated with a database, handling of exceptional cases such as out-of-stock items, and various other exciting features. Link to this internet website [-](https://patio_furniture.com)
+
 ## Features
 • Browse available products.  
 • Filter by categories, price or tags.  
